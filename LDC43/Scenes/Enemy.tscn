@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Assets/enemy_melee1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/enemy_melee2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/enemy_melee3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/enemy_melee4.png" type="Texture" id=5]
+[ext_resource path="res://Assets/enemy_range1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/enemy_range2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/enemy_range3.png" type="Texture" id=8]
+[ext_resource path="res://Assets/enemy_range4.png" type="Texture" id=9]
+[ext_resource path="res://Assets/enemyAttack.wav" type="AudioStream" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "melee",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "ranged",
+"speed": 5.0
+} ]
+
+[node name="Enemy" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 5
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+moveState = null
+attackState = null
+sprRotation = 0.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "ranged"
+playing = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="1"]
+
+visible = false
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+
+visible = false
+build_mode = 0
+polygon = PoolVector2Array( -24.0145, 32.2757, -24.3503, 10.7659, -27.4619, -16.0347, -20.4689, -27.2234, -7.88153, -31.7689, 6.10445, -30.0206, 14.496, -26.8738, 22.5379, -11.8112, 27.1253, 7.86807, 27.5127, 31.8883 )
+
+[node name="Shoot" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+

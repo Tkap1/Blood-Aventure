@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Levels/Pickup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/LevelBeater.gd" type="Script" id=2]
+[ext_resource path="res://Assets/levelBeaterOut.png" type="Texture" id=3]
+[ext_resource path="res://Assets/levelBeaterIn.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "anim"
+length = 4.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 32.0
+
+[node name="LevelBeater" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+
+rotation = 0.17324
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimationPlayer" parent="Sprite" index="0"]
+
+autoplay = "anim"
+anims/anim = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" parent="." index="2"]
+
+visible = false
+shape = SubResource( 2 )
+
+

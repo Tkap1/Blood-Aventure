@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Turret.gd" type="Script" id=1]
+[ext_resource path="res://Assets/enemyTurret.png" type="Texture" id=2]
+
+[node name="Turret" type="StaticBody2D" index="0"]
+
+scale = Vector2( 0.25, 0.25 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+damageMultiplier = 1.0
+shootSpeedMultiplier = 1.0
+startDelay = 0.0
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+visible = false
+position = Vector2( 64.9325, 64.9325 )
+build_mode = 0
+polygon = PoolVector2Array( -63.0504, 63.4335, -63.0504, 51.1223, -48.8925, 44.9667, -20.5768, 43.7356, -19.3456, -39.9806, -10.1122, -43.0584, 10.8168, -42.4428, 21.2813, -39.9806, 23.7436, -33.2094, 19.4409, -26.9461, 20.552, 44.719, 53.8846, 45.8301, 62.2177, 52.4966, 64.9736, 63.7402 )
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Position2D" type="Position2D" parent="." index="3"]
+
+position = Vector2( 65.8779, 15.7736 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

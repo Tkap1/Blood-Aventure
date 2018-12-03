@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Levels/Turret.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Levels/Spike.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Levels/LevelBeater.tscn" type="PackedScene" id=4]
+
+[node name="Level" index="0" instance=ExtResource( 1 )]
+
+[node name="TileMap" parent="." index="0"]
+
+tile_data = PoolIntArray( 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 589847, 0, 0, 589848, 0, 0, 589849, 0, 0, 589850, 0, 0, 589851, 0, 0, 589852, 0, 0, 589853, 0, 0, 589854, 0, 0, 589855, 0, 0, 589856, 0, 0, 589857, 0, 0, 589858, 0, 0, 589859, 0, 0, 589860, 0, 0, 589861, 0, 0, 589862, 0, 0, 589863, 0, 0, 589864, 0, 0, 589865, 0, 0, 589866, 0, 0, 589867, 0, 0, 589868, 0, 0, 589869, 0, 0, 589870, 0, 0, 589871, 0, 0, 589872, 0, 0, 589873, 0, 0, 589874, 0, 0, 589875, 0, 0, 589876, 0, 0, 589877, 0, 0, 589878, 0, 0, 589879, 0, 0, 589880, 0, 0, 589881, 0, 0, 589882, 0, 0, 589883, 0, 0, 589884, 0, 0, 589885, 0, 0, 589886, 0, 0, 589887, 0, 0, 589888, 0, 0, 589889, 0, 0, 589890, 0, 0, 589891, 0, 0, 589892, 0, 0, 589893, 0, 0, 589894, 0, 0, 589895, 0, 0, 589896, 0, 0, 589897, 0, 0, 589898, 0, 0, 589899, 0, 0, 589900, 0, 0, 589901, 0, 0, 589902, 0, 0, 589903, 0, 0, 655360, 0, 0, 655425, 0, 0, 655439, 0, 0, 720896, 0, 0, 720961, 0, 0, 720975, 0, 0, 786432, 0, 0, 786497, 0, 0, 786511, 0, 0, 851968, 0, 0, 852033, 0, 0, 852047, 0, 0, 917504, 0, 0, 917536, 0, 0, 917537, 0, 0, 917569, 0, 0, 917583, 0, 0, 983040, 0, 0, 983072, 0, 0, 983073, 0, 0, 983105, 0, 0, 983106, 0, 0, 983107, 0, 0, 983108, 0, 0, 983109, 0, 0, 983110, 0, 0, 983111, 0, 0, 983112, 0, 0, 983113, 0, 0, 983114, 0, 0, 983119, 0, 0, 1048576, 0, 0, 1048608, 0, 0, 1048609, 0, 0, 1048655, 0, 0, 1114112, 0, 0, 1114144, 0, 0, 1114145, 0, 0, 1114191, 0, 0, 1179648, 0, 0, 1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0, 1179680, 0, 0, 1179681, 0, 0, 1179682, 0, 0, 1179683, 0, 0, 1179684, 0, 0, 1179685, 0, 0, 1179686, 0, 0, 1179687, 0, 0, 1179688, 0, 0, 1179689, 0, 0, 1179690, 0, 0, 1179691, 0, 0, 1179692, 0, 0, 1179693, 0, 0, 1179694, 0, 0, 1179695, 0, 0, 1179696, 0, 0, 1179697, 0, 0, 1179698, 0, 0, 1179699, 0, 0, 1179700, 0, 0, 1179701, 0, 0, 1179702, 0, 0, 1179703, 0, 0, 1179704, 0, 0, 1179705, 0, 0, 1179706, 0, 0, 1179707, 0, 0, 1179708, 0, 0, 1179709, 0, 0, 1179710, 0, 0, 1179711, 0, 0, 1179712, 0, 0, 1179713, 0, 0, 1179714, 0, 0, 1179715, 0, 0, 1179716, 0, 0, 1179717, 0, 0, 1179718, 0, 0, 1179719, 0, 0, 1179720, 0, 0, 1179721, 0, 0, 1179722, 0, 0, 1179723, 0, 0, 1179724, 0, 0, 1179725, 0, 0, 1179726, 0, 0, 1179727, 0, 0 )
+
+[node name="PlayerStartPos" parent="." index="1"]
+
+position = Vector2( 128, 480 )
+
+[node name="Turret" parent="Other" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 320, 544 )
+bulletSizeMultiplier = 1.0
+
+[node name="Turret8" parent="Other" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 2048, 352 )
+rotation = 3.14159
+bulletSizeMultiplier = 1.0
+
+[node name="Turret9" parent="Other" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 2496.85, 575.996 )
+rotation = 10.9956
+shootSpeedMultiplier = 0.333
+bulletSizeMultiplier = 0.5
+
+[node name="Turret4" parent="Other" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 640, 544 )
+damageMultiplier = 2.0
+shootSpeedMultiplier = 1.5
+bulletSizeMultiplier = 1.0
+
+[node name="Turret2" parent="Other" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 511.061, 352.734 )
+rotation = 3.14159
+bulletSizeMultiplier = 1.0
+
+[node name="Turret3" parent="Other" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 831.061, 352.734 )
+rotation = 3.14159
+damageMultiplier = 2.0
+shootSpeedMultiplier = 1.5
+bulletSizeMultiplier = 1.0
+
+[node name="Turret5" parent="Other" index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 1120, 512 )
+rotation = 1.57079
+shootSpeedMultiplier = 0.5
+bulletSizeMultiplier = 0.5
+startDelay = 0.5
+
+[node name="Turret6" parent="Other" index="7" instance=ExtResource( 2 )]
+
+position = Vector2( 1120, 544 )
+rotation = 1.57079
+shootSpeedMultiplier = 0.5
+bulletSizeMultiplier = 0.5
+
+[node name="Turret7" parent="Other" index="8" instance=ExtResource( 2 )]
+
+position = Vector2( 1120, 480 )
+rotation = 1.57079
+shootSpeedMultiplier = 0.5
+bulletSizeMultiplier = 0.5
+startDelay = 1.0
+
+[node name="Spike" parent="Other" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 1696, 544 )
+
+[node name="LevelBeater" parent="Other" index="10" instance=ExtResource( 4 )]
+
+position = Vector2( 2176, 416 )
+
+

@@ -1,0 +1,149 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Levels/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Levels/Spike.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Levels/Turret.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Levels/LevelBeater.tscn" type="PackedScene" id=5]
+
+[node name="Level5" instance=ExtResource( 1 )]
+
+[node name="TileMap" parent="." index="0"]
+
+tile_data = PoolIntArray( 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 196659, 0, 0, 196660, 0, 0, 196661, 0, 0, 196662, 0, 0, 196663, 0, 0, 196664, 0, 0, 196665, 0, 0, 196666, 0, 0, 196667, 0, 0, 196668, 0, 0, 196669, 0, 0, 196670, 0, 0, 196671, 0, 0, 196672, 0, 0, 196673, 0, 0, 262144, 0, 0, 262159, 0, 0, 262176, 0, 0, 262177, 0, 0, 262178, 0, 0, 262179, 0, 0, 262180, 0, 0, 262181, 0, 0, 262182, 0, 0, 262183, 0, 0, 262184, 0, 0, 262185, 0, 0, 262186, 0, 0, 262187, 0, 0, 262188, 0, 0, 262189, 0, 0, 262190, 0, 0, 262191, 0, 0, 262192, 0, 0, 262193, 0, 0, 262194, 0, 0, 262195, 0, 0, 262207, 0, 0, 262208, 0, 0, 262209, 0, 0, 327680, 0, 0, 327695, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 327700, 0, 0, 327701, 0, 0, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327706, 0, 0, 327707, 0, 0, 327708, 0, 0, 327709, 0, 0, 327710, 0, 0, 327711, 0, 0, 327712, 0, 0, 327743, 0, 0, 327744, 0, 0, 327745, 0, 0, 327746, 0, 0, 327747, 0, 0, 327748, 0, 0, 327749, 0, 0, 327750, 0, 0, 327751, 0, 0, 327752, 0, 0, 327753, 0, 0, 327754, 0, 0, 393216, 0, 0, 393290, 0, 0, 393291, 0, 0, 393292, 0, 0, 458752, 0, 0, 458828, 0, 0, 524288, 0, 0, 524364, 0, 0, 524365, 0, 0, 524366, 0, 0, 524367, 0, 0, 524368, 0, 0, 524369, 0, 0, 524370, 0, 0, 589824, 0, 0, 589906, 0, 0, 589907, 0, 0, 589908, 0, 0, 589909, 0, 0, 589910, 0, 0, 589911, 0, 0, 589912, 0, 0, 655360, 0, 0, 655448, 0, 0, 720896, 0, 0, 720984, 0, 0, 786432, 0, 0, 786520, 0, 0, 851968, 0, 0, 852056, 0, 0, 917504, 0, 0, 917521, 0, 0, 917522, 0, 0, 917567, 0, 0, 917568, 0, 0, 917569, 0, 0, 917592, 0, 0, 983040, 0, 0, 983057, 0, 0, 983058, 0, 0, 983071, 0, 0, 983072, 0, 0, 983073, 0, 0, 983074, 0, 0, 983075, 0, 0, 983076, 0, 0, 983077, 0, 0, 983078, 0, 0, 983079, 0, 0, 983080, 0, 0, 983081, 0, 0, 983082, 0, 0, 983083, 0, 0, 983084, 0, 0, 983085, 0, 0, 983086, 0, 0, 983087, 0, 0, 983088, 0, 0, 983089, 0, 0, 983090, 0, 0, 983091, 0, 0, 983092, 0, 0, 983093, 0, 0, 983094, 0, 0, 983095, 0, 0, 983096, 0, 0, 983097, 0, 0, 983098, 0, 0, 983099, 0, 0, 983100, 0, 0, 983101, 0, 0, 983102, 0, 0, 983103, 0, 0, 983104, 0, 0, 983105, 0, 0, 983106, 0, 0, 983107, 0, 0, 983108, 0, 0, 983109, 0, 0, 983110, 0, 0, 983111, 0, 0, 983112, 0, 0, 983113, 0, 0, 983114, 0, 0, 983121, 0, 0, 983122, 0, 0, 983123, 0, 0, 983124, 0, 0, 983125, 0, 0, 983126, 0, 0, 983127, 0, 0, 983128, 0, 0, 1048576, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048607, 0, 0, 1048650, 0, 0, 1048657, 0, 0, 1114112, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114143, 0, 0, 1114186, 0, 0, 1114193, 0, 0, 1179648, 0, 0, 1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0, 1179722, 0, 0, 1179729, 0, 0, 1245258, 0, 0, 1245265, 0, 0, 1310794, 0, 0, 1310795, 0, 0, 1310796, 0, 0, 1310797, 0, 0, 1310798, 0, 0, 1310799, 0, 0, 1310800, 0, 0, 1310801, 0, 0 )
+
+[node name="PlayerStartPos" parent="." index="1"]
+
+position = Vector2( 96, 512 )
+
+[node name="Enemy" parent="Enemies" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 800, 512 )
+attackState = 1
+
+[node name="Enemy5" parent="Enemies" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 2272, 448 )
+attackState = 1
+
+[node name="Enemy6" parent="Enemies" index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 2368, 448 )
+attackState = 1
+
+[node name="Enemy2" parent="Enemies" index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 1312, 448 )
+moveState = 0
+attackState = 0
+
+[node name="Enemy3" parent="Enemies" index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 1568, 448 )
+moveState = 0
+attackState = 0
+
+[node name="Enemy4" parent="Enemies" index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 1856, 448 )
+moveState = 0
+attackState = 0
+
+[node name="Enemy7" parent="Enemies" index="6" instance=ExtResource( 2 )]
+
+position = Vector2( 1312, 192 )
+moveState = 3
+attackState = 1
+sprRotation = 180.0
+
+[node name="Spike" parent="Other" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 224, 544 )
+
+[node name="Spike2" parent="Other" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 256, 544 )
+
+[node name="Spike3" parent="Other" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 288, 544 )
+
+[node name="Spike4" parent="Other" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 2016, 416 )
+
+[node name="Spike5" parent="Other" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 2048, 416 )
+
+[node name="Spike6" parent="Other" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 2080, 416 )
+
+[node name="Spike10" parent="Other" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 2400, 608 )
+
+[node name="Spike11" parent="Other" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 2432, 608 )
+
+[node name="Spike12" parent="Other" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 2464, 608 )
+
+[node name="Spike13" parent="Other" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 2496, 608 )
+
+[node name="Spike14" parent="Other" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 2528, 608 )
+
+[node name="Spike15" parent="Other" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 2560, 608 )
+
+[node name="Spike7" parent="Other" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 2048, 224 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Spike8" parent="Other" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 2080, 224 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Spike9" parent="Other" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 2112, 224 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Turret" parent="Other" index="15" instance=ExtResource( 4 )]
+
+position = Vector2( 1054.69, 224 )
+rotation = 3.14159
+bulletSizeMultiplier = 1.0
+
+[node name="Turret2" parent="Other" index="16" instance=ExtResource( 4 )]
+
+position = Vector2( 2400, 288 )
+rotation = -1.57079
+bulletSizeMultiplier = 1.0
+
+[node name="Turret3" parent="Other" index="17" instance=ExtResource( 4 )]
+
+position = Vector2( 288, 160 )
+rotation = -3.14159
+damageMultiplier = 2.0
+shootSpeedMultiplier = 2.0
+bulletSizeMultiplier = 1.0
+
+[node name="LevelBeater" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 2720, 416 )
+
+
